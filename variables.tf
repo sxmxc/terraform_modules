@@ -1,3 +1,15 @@
+variable "vsphereuser" {
+  description = "vCenter user"
+  default     = "administrator@vsphere.local"
+}
+variable "vspherepass" {
+  description = "vCenter password"
+  default     = ""
+}
+variable "vsphere" {
+  description = "vCenter FQDN or IP"
+  default     = ""
+}
 #Network Section
 variable "network" {
   description = "Define PortGroup and IPs/CIDR for each VM. If no CIDR provided, the subnet mask is taken from var.ipv4submask."

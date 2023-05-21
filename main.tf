@@ -1,3 +1,13 @@
+provider "vsphere" {
+  user           = var.vsphereuser
+  password       = var.vspherepass
+  vsphere_server = var.vsphere
+
+  # if you have a self-signed cert
+  allow_unverified_ssl = true
+}
+
+
 data "vsphere_datacenter" "dc" {
   name = var.dc
 }
